@@ -1,4 +1,4 @@
-# Green Spaces - Vegetation Analysis Platform
+# Urban Greenspaces - Vegetation Analysis Platform
 
 A comprehensive web application for land use classification and vegetation analysis using advanced machine learning algorithms.
 
