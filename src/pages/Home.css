@@ -1,0 +1,296 @@
+.home {
+  margin-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a4d3a 0%, #2d5a27 25%, #4a7c59 50%, #6ba368 75%, #8bc34a 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 200, 80, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(60, 150, 60, 0.3) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffffff, #a8e6a3, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from { filter: drop-shadow(0 0 20px rgba(168, 230, 163, 0.5)); }
+  to { filter: drop-shadow(0 0 30px rgba(168, 230, 163, 0.8)); }
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+  background: linear-gradient(135deg, #45a049, #4CAF50);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4rem;
+  z-index: 2;
+}
+
+.stat {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ffffff, #a8e6a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* G20 Goals Section */
+.g20-goals {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2d5a27;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.goal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(76, 175, 80, 0.1);
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.goal-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.1));
+}
+
+.goal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2d5a27;
+}
+
+.goal-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+  color: white;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.step-arrow {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-stats {
+    gap: 2rem;
+    bottom: 2rem;
+  }
+  
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .steps {
+    flex-direction: column;
+  }
+  
+  .step-arrow {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
